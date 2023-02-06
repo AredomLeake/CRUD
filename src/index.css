@@ -25,7 +25,7 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: calc(100vh - 2px);
+  height: calc(100vh - 15px);
   max-width: 500px;
   border: 1px solid mediumblue;
   margin: auto;
@@ -44,7 +44,7 @@ code {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   overflow-y: auto;
 }
@@ -56,7 +56,7 @@ code {
   display: grid;
   place-content: center;
 }
-.ul {
+ul {
   width: 100%;
   list-style: none;
   padding: 0 0.25rem 0.25rem;
@@ -67,7 +67,7 @@ code {
   align-items: center;
   text-align: start;
   padding: 0.5rem 0 0.5rem 0.5rem;
-  margin: 0.25rem 0;
+  margin: 0.25rem 0 0;
   background-color: #eee;
 }
 .item:first-child {
@@ -85,7 +85,7 @@ code {
   margin-right: 1rem;
 }
 .item input:focus + label {
-  text-decoration: underline;
+  text-decoration: line-through;
 }
 .item > label {
   font-size: 0.75rem;
@@ -103,4 +103,65 @@ code {
 .item svg:hover {
   color: red;
   outline: none;
+}
+.addform {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.5rem 0 0;
+  padding: 0 0.5rem 0.25rem;
+  border-bottom: 1px solid #eee;
+}
+.addform label {
+  position: absolute;
+  left: -99999px;
+}
+.addform input[type="text"] {
+  flex-grow: 1;
+  max-width: calc(100% = 50px);
+  min-height: 48px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin-right: 0.25rem;
+  outline: none;
+}
+button {
+  height: 48px;
+  min-height: 48px;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: aliceblue;
+  color: mediumblue;
+  cursor: pointer;
+}
+button:focus,
+button:hover {
+  color: white;
+  background-color: limegreen;
+  outline: none;
+}
+.searchform {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.5rem 0 0.5rem;
+  padding: 0 0.5rem 0.25rem;
+  border-bottom: 1px solid #eee;
+}
+.searchform input {
+  width: 100%;
+  height: 48px;
+  min-height: 48px;
+  flex-flow: 1;
+  padding: 0.25rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+
+  outline: none;
+}
+.searchform label {
+  left: 9999px;
+  position: absolute;
 }
